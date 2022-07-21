@@ -7,6 +7,8 @@ use crate::commands::set_command::set_command;
 
 mod commands;
 mod get_versions;
+mod linking;
+mod replacer;
 
 fn main() {
 
