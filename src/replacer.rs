@@ -8,13 +8,13 @@ pub fn replace_php_version(config_path: String, old: String, new: String) {
         .expect("Cannot read shell config");
     content = str::replace(
         content.clone().as_str(),
-        format!("export PATH=\"/opt/homebrew/opt/php@{}/sbin:$PATH\"", current_version.clone()).as_str(),
-        format!("export PATH=\"/opt/homebrew/opt/php@{}/sbin:$PATH\"", selected_version.clone()).as_str()
+        format!("export PATH=\"/opt/homebrew/opt/php@{}/sbin:$PATH\"", old.clone()).as_str(),
+        format!("export PATH=\"/opt/homebrew/opt/php@{}/sbin:$PATH\"", new.clone()).as_str()
     );
     content = str::replace(
         content.clone().as_str(),
-        format!("export PATH=\"/opt/homebrew/opt/php@{}/bin:$PATH\"", current_version.clone()).as_str(),
-        format!("export PATH=\"/opt/homebrew/opt/php@{}/bin:$PATH\"", selected_version.clone()).as_str()
+        format!("export PATH=\"/opt/homebrew/opt/php@{}/bin:$PATH\"", old.clone()).as_str(),
+        format!("export PATH=\"/opt/homebrew/opt/php@{}/bin:$PATH\"", new.clone()).as_str()
     );
     let mut file = OpenOptions::new()
         .write(true)

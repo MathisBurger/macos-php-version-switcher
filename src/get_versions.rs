@@ -21,6 +21,7 @@ pub fn get_current_version() -> String {
         .expect("Cannot get current php version");
     let current_version_res = String::from_utf8(current_version_output.stdout).expect("Cannot parse");
     let current_version_split: Vec<&str> = current_version_res.split(" ").collect();
-    let version_split: Vec<&str> = current_version_split.get(1).unwrap().to_string().split(".").collect();
+    let full_version = current_version_split.get(1).unwrap().to_string();
+    let version_split: Vec<&str> = full_version.split(".").collect();
     return format!("{}.{}", version_split.get(0).unwrap(), version_split.get(1).unwrap());
 }
