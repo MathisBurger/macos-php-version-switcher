@@ -1,4 +1,3 @@
-use std::fs;
 use rusty_cli::commands::command::Command;
 use rusty_cli::flags::flag::Flags;
 use crate::get_versions::get_versions;

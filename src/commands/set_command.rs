@@ -1,15 +1,8 @@
-use std::fmt::format;
-use std::{fs, str, string};
-use std::fs::{File, OpenOptions};
 use std::path::Path;
 use rusty_cli::commands::command::Command;
-use rusty_cli::file_reader::FileReader;
 use rusty_cli::flags::flag::Flags;
 use rusty_cli::inputs::select_input::SelectInput;
 use crate::get_versions::{get_current_version, get_versions};
-use std::io::Write;
-use std::process::Stdio;
-use std::ptr::replace;
 use crate::linking::{link_php_version, unlink_php_version};
 use crate::replacer::replace_php_version;
 
