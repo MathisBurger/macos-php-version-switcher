@@ -18,6 +18,14 @@ The php version switcher is a cli application developed for
 switching between php versions in a common macOS environment.
 It is easy to use and does not require any dependencies!
 
+# Important
+This software only works with a really specific techstack. 
+You have to use:
+- `brew` as your package manager
+- `zsh` as your shell
+- `macos` as your operating system
+Otherwise it will not work.
+
 # Installation
 
 Download the latest artifact from the release and copy move it into
